@@ -6,7 +6,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 createRoot(document.getElementById('root')).render(
-  <div>
-     <div className="h1 text-center text-primary">Hello Welcome to React Vite application </div>
-  </div>
+  <StrictMode>
+    <App />
+  </StrictMode>
 )
