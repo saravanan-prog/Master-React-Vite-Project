@@ -7,6 +7,6 @@ import Expression from './pages/c_JsxExpression/Expression.jsx'
 
 createRoot(document.getElementById('root')).render(
   <div>
-     <Expression />
+     <p> Hello Welcome to React JS world </p>
   </div>
 )
