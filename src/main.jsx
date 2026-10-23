@@ -2,11 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
-import Expression from './pages/c_JsxExpression/Expression.jsx'
+
+import PortFolioMainpage from './d_props_drilling/PortolioMainpage.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <div>
-     <p> Hello Welcome to React JS world </p>
+    <PortFolioMainpage />
   </div>
 )
