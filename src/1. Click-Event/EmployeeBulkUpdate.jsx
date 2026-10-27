@@ -22,7 +22,6 @@ export default function EmPloyeeBulkUpdate(){
                 degree:"M.tech",
                 work:"Infosys",
                 location : "Banglore"
-                
             }
         )
     }
