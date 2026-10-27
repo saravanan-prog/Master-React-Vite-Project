@@ -55,9 +55,16 @@ export default class C_update_the_state extends Component{
                     <div className="mt-1"> 
                         <span className="h4 text-seocondary">Candidate Permanent Address</span>
                         <span> {this.state.address.permanent} </span>
-                        <span>
-                            <button>Update permanent address</button>
-                        </span>
+                        <div>
+                            <button
+                                onClick = { 
+                                    ()=> this.setState( { 
+                                        address : { 
+                                            permanent :"100rd cross st tiruchi"
+                                    }})}
+                            
+                            >Update permanent address</button>
+                        </div>
                     </div>
                 </div>
             </>
