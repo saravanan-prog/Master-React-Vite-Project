@@ -1,13 +1,18 @@
 import { Component } from "react";
 
-export default class A_SampleClasscomponent extends Component{
+export default class A_SampleClasscomponent extends Component {
+    constructor(){
+        super()
+    }
 
     render(){
         return(
             <>
                 <div>
-                    <h3> Hi I am Class Component from React JS </h3>
+                    <div className="h1 text-center text-primary"> Class Component </div>
+                    <div className="mt-3">Developed By : Saravanan Durai</div>
                 </div>
+            
             </>
         )
     }

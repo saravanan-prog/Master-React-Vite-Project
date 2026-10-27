@@ -2,28 +2,63 @@ import { Component } from "react";
 
 export default class C_update_the_state extends Component{
 
-    constructor(){
+     constructor(){
         super()
         this.state = {
-           count : 0
+            candidateName : "saravanan",
+            candidateAge : 27,
+            address:{
+                temp:"5th cross street velachery",
+                permanent : "2nd cross street tambaram"
+            }
         }
     }
-
+    
     render(){
         return(
             <>
                 <div>
-                    <div className="h2 text-primary text-center">Simple Calculator</div>
+                    <div className="h2 text-primary text-center">Employee Information</div>
                 </div>
                 <div className="mt-3">
-                   <div className="h3"> {this?.state?.count} </div>
-                   <div>
-                        <button onClick ={()=> { this.setState({ count: this.state.count + 1 }) } }> ADD </button>
-                        <button onClick ={()=> { this.setState({ count: this.state.count - 1 }) } }> SUB </button>
-                        <button onClick ={()=> { this.setState({ count: this.state.count * 2 }) } }> MUL </button>
-                        <button onClick ={()=> { this.setState({ count: this.state.count / 2 }) } }> DIV </button>
-                        <button onClick ={()=> { this.setState({ count: 0 }) } }> RESET </button>
-                   </div>
+                    <div className="mt-1"> 
+                        <span className="h4 text-seocondary">Candidate Name</span>
+                        <span> {this.state.candidateName} </span>
+                        <div>
+                            <button 
+                                onClick = { ()=> this.setState({candidateName:"Rajesh"}) }
+                            >Update name</button>
+                        </div>
+                    </div>
+                    <div className="mt-1"> 
+                        <span className="h4 text-seocondary">Candidate Age</span>
+                        <span> {this.state.candidateAge} </span>
+                        <div>
+                            <button 
+                                onClick = { ()=> this.setState({candidateAge : 30}) }
+                            >Update age</button>
+                        </div>
+                    </div>
+                    <div className="mt-1"> 
+                        <span className="h4 text-seocondary">Candidate Temporary Address</span>
+                        <span> {this.state.address.temp} </span>
+                        <div>
+                            <button  onClick = { 
+                                ()=> this.setState( { 
+                                    address : { 
+                                        temp :"1st cross st Tanjore"
+                                 }})}
+
+                             > Update temp address</button>
+                        </div>
+                    </div>
+                    <div className="mt-1"> 
+                        <span className="h4 text-seocondary">Candidate Permanent Address</span>
+                        <span> {this.state.address.permanent} </span>
+                        <span>
+                            <button>Update permanent address</button>
+                        </span>
+                    </div>
                 </div>
             </>
         )
