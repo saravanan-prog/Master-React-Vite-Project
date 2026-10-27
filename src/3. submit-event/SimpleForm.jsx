@@ -1,8 +1,10 @@
 import { useState } from "react"
+import { postApiCall } from "../0.services/Service"
 
 export default function SimpleForm(){
 
     const [formData,setFormData] = useState({})
+    const [apiSuccess,setApisuccess] = useState(false)
 
     const handleChange = (e) => {
         const fieldName  =  e.target.name
@@ -12,11 +14,19 @@ export default function SimpleForm(){
 
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit =  async (e) => {
         e.preventDefault()
         //API-Code
         try{
-            console.log("Submit Event is triggred...",formData)
+            const payload = {
+                "id": 0,
+                "username": formData['canididate-name'],
+                "email" :   formData['canididate-email'],
+                "password": formData['canididate-name']
+            }
+            const response =  await postApiCall(payload)
+            
+            console.log("response===>",response)
         }
         catch(error){
             console.error("Error:::",error)
