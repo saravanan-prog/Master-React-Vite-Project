@@ -4,6 +4,7 @@ export default class B_class_component_state extends Component{
 
     constructor(){
         super()
+
         this.state = {
             candidateName : "saravanan",
             candidateAge : 27,
@@ -12,6 +13,7 @@ export default class B_class_component_state extends Component{
                 permanent : "2nd cross street tambaram"
             }
         }
+
     }
     
     render(){
@@ -23,7 +25,7 @@ export default class B_class_component_state extends Component{
                 <div className="mt-3">
                     <div className="mt-1"> 
                         <span className="h4 text-seocondary">Candidate Name</span>
-                        <span> {this.state.candidateName} </span>
+                        <span> {this?.state?.candidateName} </span>
                     </div>
                     <div className="mt-1"> 
                         <span className="h4 text-seocondary">Candidate Age</span>
