@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 export default class A_SampleClasscomponent extends Component {
+    
     constructor(){
         super()
     }
