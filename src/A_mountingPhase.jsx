@@ -22,25 +22,13 @@ export default class A_mountingPhase extends Component{
     }
 
     componentDidMount(){
-
-        setTimeout(()=>{
-            this.setState( 
-                {
-                  person:{
-                    ...this.state.person,
-                    name : "Yokesh"
-                  },
-                  address:{
-                    ...this.state.address,
-                    temp : "5th cross st velachery"
-                  }
-                }
-            )
-        },500)
-        
+    
     }
+
     render(){
+
         console.log("2. Render function is Calling")
+        
         return(
             <>
                <div>

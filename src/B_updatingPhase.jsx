@@ -11,12 +11,7 @@ export default class B_updatingPhase extends Component{
         }
     }
     componentDidUpdate(prevProps, prevState){
-        
-        if(prevState.price !== this.state.price){
-            if(this.state.price >= 30000){
-                this.setState({tax: 4})
-            }
-        }
+       console.log("3. Component did update")
     }
    
 
