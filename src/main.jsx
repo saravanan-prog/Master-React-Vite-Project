@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
-import PortFolioMainpage from './d_props_drilling/PortolioMainpage.jsx'
+import A_parent_component from './c_function_props/A_parent_component.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <div>
-    <PortFolioMainpage />
+     <A_parent_component />
   </div>
 )
