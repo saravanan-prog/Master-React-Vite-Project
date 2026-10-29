@@ -5,10 +5,16 @@ export default function FruitList(
     {
         fruits,
         error,
-        handleDelete
+        setFruits
     }
 ){
     const [edit,setEdit] = useState(false)
+
+    const handleDelete = (fruitIndex) => {
+        const newFruiltList = fruits.filter((value,index) => index != fruitIndex)
+        setFruits(newFruiltList)
+
+    }
 
     return (
         <>
@@ -22,16 +28,18 @@ export default function FruitList(
                 
                 <table className="table">
                     <thead>
-                        <th>Sno</th>
-                        <th>Fruits</th>
-                        <th>Action</th>
+                       <tr>
+                            <th>Sno</th>
+                            <th>Fruits</th>
+                            <th>Action</th>
+                       </tr>
                     </thead>
                     <tbody>
                         {
                         fruits && fruits.length!= 0 ? (
                         fruits.map((value,index)=>{
                             return (
-                                <tr>
+                                <tr key = {index}>
                                     <td>{index + 1}</td>
                                     <td>{value}</td>
                                     <td>
@@ -48,22 +56,20 @@ export default function FruitList(
                             <tr > <td colspan={3}>No Fruits Found</td> </tr>
 
                         )
-                        
-                        
                         }
                     </tbody>
                 </table>
          </div>
         )
-        
         : 
         (
             <UpdateFromList 
                 error = {error}
                 fruits={fruits}
+                setFruits = {setFruits}
+                setEdit = {setEdit}
             />
-        )
-        }
+        ) }
          
         </>
     )
