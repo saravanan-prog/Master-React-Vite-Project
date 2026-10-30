@@ -5,7 +5,7 @@ export default function B_child_component(
         employeeAge,
         address: {
             temp:{
-                streetNumber : tempStreetNumber,
+                streetNumber : tempStreetNumber,   /* this is alias name   */
                 streetName : tempStreetName ,
                 city : tempCity
             },
