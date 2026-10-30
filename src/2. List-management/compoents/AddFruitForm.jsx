@@ -14,7 +14,9 @@ export default function AddFruitForm(
         setNewFruit(e.target.value)
     }
 
-    const addFruit = () => {
+    const handleSubmit = (e) => {
+        
+        e.preventDefault()
 
         const isAvailabilty = fruits.find( value => value == newFruit )
         if(isAvailabilty === undefined){
@@ -31,7 +33,8 @@ export default function AddFruitForm(
         <>
             <div className ="container mt-5">
                <div className="h5"> ADD New Fruit</div>
-               <div className="mt-1">
+               <form onSubmit = {handleSubmit}>
+                  <div className="mt-1">
                     <label htmlFor="" className="form-label">Enter New Fruit</label>
                     <input 
                         type="text" 
@@ -41,8 +44,9 @@ export default function AddFruitForm(
                     />
                </div>
                <div className = "mt-2">
-                  <button onClick={addFruit}> Add New Fruit </button>  
-               </div>
+                  <button type="submit"> Add New Fruit </button>  
+               </div>  
+               </form>
             </div>
         </>
     )
