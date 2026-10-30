@@ -6,7 +6,7 @@ export default function D_PersonDetails() {
     address: {
       tempAddress: "4th ave west, velachery,chennai",
       permanentAddress: "2, Meenakshi amman kovil st, Chennai",
-    },
+    }
   });
 
   return (
@@ -40,6 +40,7 @@ export default function D_PersonDetails() {
                     setPerson({
                       ...person,
                       address: {
+                        ...person.address,
                         tempAddress: "2nd cross st madipakam chennai",
                       },
                     });
@@ -58,6 +59,7 @@ export default function D_PersonDetails() {
                     setPerson({
                       ...person,
                       address: {
+                        ...person.address,
                         permanentAddress: "3, pillyar kovil st, Tiruchy",
                       },
                     });
