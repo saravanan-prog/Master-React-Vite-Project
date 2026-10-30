@@ -29,9 +29,8 @@ export default function AddFruitForm(
 
     return (
         <>
-        
             <div className ="container mt-5">
-                <div className="h5"> ADD New Fruit</div>
+               <div className="h5"> ADD New Fruit</div>
                <div className="mt-1">
                     <label htmlFor="" className="form-label">Enter New Fruit</label>
                     <input 
