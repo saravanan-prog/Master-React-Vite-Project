@@ -5,9 +5,13 @@ export default function A_parent_component(){
 
     return(
         <>
-            <div className="h2 text-primary text-center"> Parent Component </div>
-            <div>
-                <B_child_component />   { /* Child Component  */ }
+            <div className="container">
+                <div className="h2 text-primary text-center"> 
+                    Employee Information 
+                </div>
+                <div>
+                    <B_child_component />   { /* Child Component  */ }
+                </div>
             </div>
         </>
     )

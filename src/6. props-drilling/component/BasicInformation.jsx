@@ -1,37 +1,27 @@
 import EducationInfo from "./EducationInfo";
 
 export default function BasicInformation(
-     {
-        student:{
-            name,
-            address,
-            sslc,
-            hsc
-        }
-    }
-){
+  { student }
+) {
+  return (
+    <>
+      <div className="container mt-5">
+        <div className="h3">Basic Information</div>
+        <div>
+          <span className="fs-5">Name</span>
+          <span> {student.name} </span>
+        </div>
 
-
-    return(
-        <>
-            <div className="h3">Basic Information</div>
-            <div>
-                <span className="fs-32">Name</span>
-                <span> {name}</span>
-            </div>
-
-            <div>
-                <span className="fs-32">Address</span>
-                <span> {address}</span>
-            </div>
-            <div>
-                <EducationInfo 
-                    sslc = {sslc}
-                    hsc = {hsc}
-                />
-            </div>
-
-        
-        </>
-    )
+        <div>
+          <span className="fs-5">Address</span>
+          <span> {student.address} </span>
+        </div>
+        <div>
+          <EducationInfo 
+             student = {student}
+          />
+        </div>
+      </div>
+    </>
+  );
 }

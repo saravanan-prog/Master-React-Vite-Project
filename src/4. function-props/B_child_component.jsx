@@ -11,10 +11,10 @@ export default function B_child_component(
         <>
          
             <div>
-                <span className="fs-3">Count : </span>
-                <span> {count} </span>
+                <span className="fs-5"> Count : </span>
+                <span className="ms-3"> {count} </span>
             </div>
-            <div>
+            <div className="mt-4">
                 <button onClick = {addCout}> ADD </button>
                 <button onClick = {subractCount}> SUB </button>
             </div>

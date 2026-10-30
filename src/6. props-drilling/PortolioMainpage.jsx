@@ -6,14 +6,29 @@ export default function PortFolioMainpage(){
         {
             name:"Saravanan",
             address: "2nd cross st",
-            sslc : 425,
-            hsc :780
+            education:{
+                sslc : 480,
+                hsc : 780
+            },
+            exprience: {
+                "2022-2024" : "TCS",
+                "2024-2026" : "Infosys"
+            },
+            projects:[
+                "online Attandance management",
+                "Portfolio website"
+            ],
+            skills:[
+                "React",
+                "Angular"
+
+            ]
         }
     )
 
     return(
         <>
-            <div>
+            <div class="container">
                 <BasicInformation 
                     student = {student}
                 />

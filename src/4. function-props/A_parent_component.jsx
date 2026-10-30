@@ -1,5 +1,5 @@
 import { useState } from "react"
-import B_child_component from "./B_Child_component"
+import B_child_component from "./B_child_component"
 
 export default function A_parent_component(){
 
@@ -14,17 +14,17 @@ export default function A_parent_component(){
 
     return(
         <>
-            <div className="h2 text-primary text-center"> Functional Props </div>
-            <div className="h5">Parent Component</div>
-            <div>
-                <B_child_component
-                   count = {count}
-                   addCout = {addCout}
-                   subractCount = {subractCount}
-                />
+            <div className="container">
+                <div className="h2 text-primary text-center"> Functional Props </div>
+                <div className="h5 mt-3 text-primary">Simple Counter App</div>
+                <div>
+                    <B_child_component 
+                        count = {count}
+                        addCout = {addCout}
+                        subractCount = {subractCount}
+                    />
+                </div>
             </div>
-        
-        
         </>
     )
 }

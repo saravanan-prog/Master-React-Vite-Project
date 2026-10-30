@@ -4,49 +4,53 @@ export default function B_child_component(
         employeeName,
         employeeAge,
         address: {
-            temp:{
+            temp: {
+
                 streetNumber : tempStreetNumber,   /* this is alias name   */
-                streetName : tempStreetName ,
+                streetName : tempStreetName,
                 city : tempCity
+
             },
-            permanent:{
+            permanent: {
+
                 streetNumber : permanentStreetNumber,
-                streetName :  permanentstreetName,
+                streetName : permanentStreetName,
                 city : permanentCity
+
             }
         },
         employeeSalary
     }
-){
+) {
 
-    
 
-    return(
+
+    return (
         <>
-            <div>
-                <span className="fs-3">Employee Name : </span>
-                <span> {employeeName} </span>
-            </div>
+            <div className="container mt-5">
+                <div>
+                    <span className="fs-3">Employee Name : </span>
+                    <span> {employeeName} </span>
+                </div>
 
-            <div>
-                <span className="fs-3">Employee Age : </span>
-                <span> {employeeAge} </span>
-            </div>
-            <div>
-                <span className="fs-3">Employee Temporary address : </span>
-                <span> {` ${tempStreetNumber},  ${tempStreetName} -  ${tempCity} ` } </span>
-            </div>
-            <div>
-                <span className="fs-3">Employee Permanent address : </span>
-                <span> {` ${permanentStreetNumber},  ${permanentstreetName} -  ${permanentCity} ` } </span>
-            </div>
+                <div>
+                    <span className="fs-3">Employee Age : </span>
+                    <span> {employeeAge} </span>
+                </div>
+                <div>
+                    <span className="fs-3">Employee Temporary address : </span>
+                    <span> {` ${tempStreetNumber},  ${tempStreetName} -  ${tempCity} `} </span>
+                </div>
+                <div>
+                    <span className="fs-3">Employee Permanent address : </span>
+                    <span> {` ${permanentStreetNumber},  ${permanentStreetName} -  ${permanentCity} `} </span>
+                </div>
 
-            <div>
-                <span className="fs-3">Employee Take home Salary : </span>
-                <span> {employeeSalary} </span>
+                <div>
+                    <span className="fs-3">Employee Take home Salary : </span>
+                    <span> {employeeSalary} </span>
+                </div>
             </div>
-        
-    
         </>
     )
 }

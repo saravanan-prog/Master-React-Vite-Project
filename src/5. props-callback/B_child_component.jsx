@@ -4,23 +4,24 @@ export default function B_child_component(
     {
         count,
         addCout,
-        subractCount
+        multiplyCount
     }
 ){  
-    const [addItem,setAdditem] = useState(5)
-    const [mulItem,setMulItem] = useState(2)
+    const [addValue,setAddValue] = useState(2)
+    const [multiplyValue,setMultiplyValue] = useState(5)
 
     return(
         <>
-         
+          <div className="container mt-3">
             <div>
-                <span className="fs-3">Count : </span>
-                <span> {count} </span>
+                <span className="fs-5">Count : </span>
+                <span className="ms-3"> {count} </span>
             </div>
-            <div>
-                <button onClick = {() => addCout(addItem)}> ADD + {addItem} </button>
-                <button onClick = {() => subractCount(mulItem)}> Mul *  {mulItem}  </button>
+            <div className="mt-5">
+                <button onClick = { () => addCout(addValue) } > ADD + {addValue} </button>
+                <button onClick = { () => multiplyCount(multiplyValue) } className="ms-2"> Mul * {multiplyValue}  </button>
             </div>
+          </div>
     
         </>
     )
