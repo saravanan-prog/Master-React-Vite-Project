@@ -7,7 +7,7 @@ export default function A_parent_component(){
         <>
             <div className="h2 text-primary text-center"> Parent Component </div>
             <div>
-                <B_child_component />
+                <B_child_component />   { /* Child Component  */ }
             </div>
         </>
     )

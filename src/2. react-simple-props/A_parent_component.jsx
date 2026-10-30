@@ -5,7 +5,6 @@ export default function A_parent_component(){
 
     const [employeeName,setEmployeeName] = useState("bala krishnan")
     const [employeeAge,setEmployeeAge]   = useState(28)
-    
     const [employeeSalary,setEmployeeSalary] = useState(40000)
 
 
@@ -17,7 +16,6 @@ export default function A_parent_component(){
                    employeeName = {employeeName}
                    employeeAge  = {employeeAge}
                    employeeSalary = {employeeSalary}
-                   address   = {address}
                 />
             </div>
         
