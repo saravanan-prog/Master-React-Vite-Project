@@ -8,7 +8,7 @@ export default function UpdateFromList(
         setEdit
     }
 ) {
-    const [fruitState, setFruitState] = useState({})
+    const [fruitState, setFruitState] = useState([])
 
     const handleSave = (fruitIndex) => {
         const newFruitList = fruits.map((value, index) => {
@@ -43,7 +43,7 @@ export default function UpdateFromList(
                                     <td>
                                         <input
                                             type="text"
-                                            value={fruitState[index] ?? value}
+                                            value = { fruitState[index] ?? value}
                                             onChange={(e) => {
                                                 setFruitState({
                                                     ...fruitState,

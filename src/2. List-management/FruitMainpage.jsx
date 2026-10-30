@@ -14,6 +14,7 @@ export default function FruitMainpage(){
                     fruits  = {fruits}
                     error   = {error}
                     setFruits = {setFruits}
+                    setError = {setError}
                 />
             </div>
             <div>
