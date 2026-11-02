@@ -7,15 +7,19 @@ export default function C_DeleteAction(){
     const [error, setError] = useState(null)
 
     const handleChange = (e) => {
-        setNewFruit(e.target.value)
+        if(e.target.value != null)
+            setNewFruit(e.target.value)
     }
 
     const addFruit = () => {
 
         const isAvailabilty = fruits.find( value => value == newFruit )
+        console.log("isAvailabilty======>",isAvailabilty)
         if(isAvailabilty === undefined){
             setError(null)
-            setFruits([ ...fruits,newFruit])
+            console.log("newFruit==>",newFruit)
+            if(newFruit !=null )
+                setFruits([ ...fruits,newFruit])
         }
         else{
             setError("This Fruit is already Available the list ")
@@ -39,16 +43,18 @@ export default function C_DeleteAction(){
                 
                 <table className="table">
                     <thead>
-                        <th>Sno</th>
-                        <th>Fruits</th>
-                        <th>Action</th>
+                       <tr>
+                            <th>Sno</th>
+                            <th>Fruits</th>
+                            <th>Action</th>
+                       </tr>
                     </thead>
                     <tbody>
                         {
                         fruits && fruits.length!= 0 ? (
                         fruits.map((value,index)=>{
                             return (
-                                <tr>
+                                <tr key={index}>
                                     <td>{index + 1}</td>
                                     <td>{value}</td>
                                     <td>
