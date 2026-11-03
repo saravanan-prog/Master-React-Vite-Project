@@ -19,33 +19,16 @@ export default function D_PersonDetails() {
               <th>Person Name </th>
               <td>{person.name}</td>
               <td>
-                <button
-                  onClick={() => {
-                    setPerson({
-                      ...person,
-                      name: "Rajesh",
-                    });
-                  }}
-                >
+                <button>
                   Update Name
                 </button>
               </td>
             </tr>
             <tr>
-              <th>Person Temp. Address </th>
+              <th>Person Temp Address </th>
               <td>{person.address.tempAddress}</td>
               <td>
-                <button
-                  onClick={() => {
-                    setPerson({
-                      ...person,
-                      address: {
-                        ...person.address,
-                        tempAddress: "2nd cross st madipakam chennai",
-                      },
-                    });
-                  }}
-                >
+                <button>
                   Update Temp Address
                 </button>
               </td>
@@ -54,17 +37,7 @@ export default function D_PersonDetails() {
               <th>Person Permanent Address </th>
               <td>{person.address.permanentAddress}</td>
               <td>
-                <button
-                  onClick={() => {
-                    setPerson({
-                      ...person,
-                      address: {
-                        ...person.address,
-                        permanentAddress: "3, pillyar kovil st, Tiruchy",
-                      },
-                    });
-                  }}
-                >
+                <button>
                   Update Permanent Address
                 </button>
               </td>

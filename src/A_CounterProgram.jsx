@@ -12,7 +12,7 @@ export default function A_CounterProgram() {
                     <span className="text-danger">Count : </span>
                     <span>{count}</span></div>
                 <div className="mt-3">
-                    <button className="btn btn-primary" onClick={() => setCount(count + 1)}>ADD</button>
+                    <button className="btn btn-primary">ADD</button>
                 </div>
             </div>
 

@@ -13,7 +13,7 @@ export default function B_StringState() {
                     <span>{CandidateName}</span>
                 </div>
                 <div className="mt-3">
-                    <button className="btn btn-primary" onClick={() => setCanidateName("Ramesh")}>Change Name</button>
+                    <button className="btn btn-primary">Change Name</button>
                 </div>
             </div>
 
