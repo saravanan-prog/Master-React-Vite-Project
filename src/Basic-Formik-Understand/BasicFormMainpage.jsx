@@ -6,7 +6,6 @@ export default function BasicFormMainpage() {
 
     return (
         <>
-
             <div className="container">
                 <div className="h3 text-primary text-center"> Basic Form </div>
                 <div>
@@ -18,9 +17,7 @@ export default function BasicFormMainpage() {
                             candidateEmail:"",
                             candidatePassword:""
                         }}
-
                         onSubmit={(value) => console.log("form is submitted====>", value)}
-
                     >
                         <BasicForm />
                     </Formik>
