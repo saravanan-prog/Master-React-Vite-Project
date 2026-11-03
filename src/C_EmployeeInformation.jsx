@@ -1,13 +1,16 @@
 import { useState } from "react";
 
 export default function C_Employeeinformation() {
-    const [employee, setEmployee] = useState({
-        name: "Kishore",
-        age: 27,
-        degree: "MCA",
-        work: "TCS",
-        location: "Chennai",
-    });
+   
+    const [employee,setEmployee] = useState(
+        {
+            name : "Saravanan",
+            age : 27,
+            degree: "MBA",
+            work: "Non IT",
+            location:"Bangalore"
+        }
+    )
 
     return (
         <>
@@ -19,28 +22,27 @@ export default function C_Employeeinformation() {
                     <table className="table">
                         <tr>
                             <th>Employee Name </th>
-                            <td>{employee.name}</td>
+                            <td> {employee?.name} </td>
                             <td>
-                                <button>
-                                    Update Name
+                                <button onClick={ () => setEmployee( {...employee, name:"Rajesh" }) }>
+                                    Change name
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <th>Employee Age </th>
-                            <td>{employee.age}</td>
+                            <td> {employee?.age} </td>
                             <td>
-                                <button
-                                >
+                                <button onClick= { () => setEmployee( {...employee, age:29 })}>
                                     Update Age
                                 </button>
                             </td>
                         </tr>
                         <tr>
                             <th>Employee degree </th>
-                            <td>{employee.degree}</td>
+                            <td>{employee?.degree}</td>
                             <td>
-                                <button
+                                <button onClick= { () => setEmployee( {...employee, degree:"M.tech" })}
                                 >
                                     Update degree
                                 </button>
@@ -61,9 +63,9 @@ export default function C_Employeeinformation() {
                         </tr>
                         <tr>
                             <th>Employee location </th>
-                            <td>{employee.location}</td>
+                            <td>{employee?.location}</td>
                             <td>
-                                <button>
+                                <button onClick= { () => setEmployee( {...employee, location:"Chennai" })}>
                                     Update Location
                                 </button>
                             </td>

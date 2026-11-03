@@ -1,13 +1,16 @@
 import { useState } from "react";
 
 export default function D_PersonDetails() {
-  const [person, setPerson] = useState({
-    name: "Saravanan",
-    address: {
-      tempAddress: "4th ave west, velachery,chennai",
-      permanentAddress: "2, Meenakshi amman kovil st, Chennai",
+
+  const [person, setPerson] = useState(
+    {
+      name: "Saravanan",
+      address: {
+        tempAddress: "4th ave west, velachery, Chennai",
+        permanentAddress: "2, Meenakshi amman kovil st, Madurai",
+      }
     }
-  });
+ );
 
   return (
     <>
@@ -17,27 +20,46 @@ export default function D_PersonDetails() {
           <table className="table">
             <tr>
               <th>Person Name </th>
-              <td>{person.name}</td>
+              <td>{person?.name}</td>
               <td>
-                <button>
+                <button onClick = {()=> setPerson({ ...person, name : "kishore"}) }>
                   Update Name
                 </button>
               </td>
             </tr>
             <tr>
-              <th>Person Temp Address </th>
-              <td>{person.address.tempAddress}</td>
+              <th>Person Temparary Address </th>
+              <td>{person?.address?.tempAddress}</td>
               <td>
-                <button>
+                <button onClick = { 
+                  ()=> setPerson({ 
+                      ...person, 
+                      address: { 
+                        ...person.address,
+                        tempAddress: "5th cross st Adhambhakkam chennai"
+                      }  
+                    }) 
+              
+                }>
                   Update Temp Address
                 </button>
               </td>
             </tr>
             <tr>
               <th>Person Permanent Address </th>
-              <td>{person.address.permanentAddress}</td>
+              <td>{person?.address?.permanentAddress}</td>
               <td>
-                <button>
+                <button
+                  onClick = {()=> setPerson({
+                       ...person, 
+                      address: { 
+                        ...person.address,
+                        permanentAddress: "No.8/1 cross Azhagrar kovil st Madurai"
+                      }  
+                    })
+                  } 
+                
+                >
                   Update Permanent Address
                 </button>
               </td>
