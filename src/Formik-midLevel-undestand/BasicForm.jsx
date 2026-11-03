@@ -8,9 +8,7 @@ export default function BasicForm(){
         <>
             <div className="container">
                 <Form>
-                
                     {formField.map((value,key) => {
-
                         return (
                             <div>
                                 <FieldInput fields = {value} />

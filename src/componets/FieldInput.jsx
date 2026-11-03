@@ -15,12 +15,10 @@ export default function FieldInput(
     }
 )
 {
-    console.log("fieldLabel====>",fieldLabel)
-
+    
     return(
         <div>
             <label className="form-label">{fieldLabel}</label>
-
             <Field
                 id = {fieldID}
                 type = {fieldType}
@@ -28,7 +26,6 @@ export default function FieldInput(
                 className = {fieldClassName} 
                 placeholder= {fieldPlaceholder}
             />
-        
         </div>
     )
 }
