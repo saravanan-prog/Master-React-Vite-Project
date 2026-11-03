@@ -31,6 +31,7 @@ export default function FieldInput(
                                 className = {fieldClassName} 
                                 placeholder= {fieldPlaceholder}
                             />
+                            
                         </div>
                     ):(
                         <FieldSelectBox 
@@ -40,8 +41,7 @@ export default function FieldInput(
                             fieldClassname = {fieldClassName}
                             fieldOption = {fieldOption}
                         />
-                    ) }
-                    
+                    )}
                 </div> 
               )  
             } 
