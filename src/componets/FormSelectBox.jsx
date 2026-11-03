@@ -13,18 +13,24 @@ export default function FieldSelectBox(
 
     return(
         <div>
-
-            <Field as = {fieldType} name= {fieldName} className = {fieldClassname} id={fieldId}>
+            <Field 
+                as = {fieldType} 
+                name= {fieldName} 
+                className = {fieldClassname} 
+                id={fieldId}
+            >
                 {fieldOption && fieldOption.length != 0 ? (
                     fieldOption.map(
-                      (value,key)=> <opiton key = {key} >{value}</opiton> 
+                      (value,key)=> 
+                        (
+                            <option key ={key} value={value} >{value}</option>
+                         )
                     )
                 )
                 :
                   <option> No Item Found </option>
                 }
             </Field>
-        
         </div>
     )
 }

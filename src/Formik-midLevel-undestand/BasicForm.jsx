@@ -10,7 +10,7 @@ export default function BasicForm(){
                 <Form>
                     {formField.map((value,key) => {
                         return (
-                            <div>
+                            <div key = {key}>
                                 <FieldInput fields = {value} />
                             </div>
                         )

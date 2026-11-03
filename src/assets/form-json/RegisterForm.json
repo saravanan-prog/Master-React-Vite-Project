@@ -7,17 +7,20 @@
         "fieldClassName":"form-control",
         "fieldID":"canidateName",
         "fieldPlaceholder":"",
-        "fieldVisible":true
+        "fieldVisible":true,
+        "fieldValue":""
     },
-     {
+    {
         "fieldLabel":" Candidate Age",
         "fieldType" : "text",
-        "fieldname" : "candidateAage",
+        "fieldname" : "candidateAge",
         "fieldClassName":"form-control",
         "fieldID":"candidateAage",
         "fieldPlaceholder":"",
-        "fieldVisible":true
+        "fieldVisible":true,
+        "fieldValue":""
     },
+    
     {
         "fieldLabel":" Password",
         "fieldType" : "password",
@@ -25,7 +28,34 @@
         "fieldClassName":"form-control",
         "fieldID":"candidateAage",
         "fieldPlaceholder":"",
-        "fieldVisible":true
+        "fieldVisible":true,
+        "fieldValue":""
+    },
+    {
+        "fieldLabel":"Address",
+        "fieldType" : "textarea",
+        "fieldname" : "address",
+        "fieldClassName":"form-control",
+        "fieldID":"address",
+        "fieldPlaceholder":"Max word 120",
+        "fieldVisible":true,
+        "fieldValue":""
+    },
+    {
+        "fieldLabel":"Country",
+        "fieldType" : "select",
+        "fieldname" : "country",
+        "fieldClassName":"form-control",
+        "fieldID":"country",
+        "fieldPlaceholder":"Max word 120",
+        "fieldVisible":true,
+        "fieldOption" : [
+            "Please Select Your country",
+            "India",
+            "China",
+            "Saudi",
+            "Singapore"
+        ]
     },
      {
         "fieldLabel":"",
@@ -34,6 +64,7 @@
         "fieldClassName":"btn btn-primary mt-3",
         "fieldID":"",
         "fieldPlaceholder":"",
-        "fieldVisible":true
+        "fieldVisible":true,
+         "fieldValue":""
     }
 ]

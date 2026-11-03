@@ -1,5 +1,6 @@
 import { Formik,Form,Field } from "formik"
 import BasicForm from "./BasicForm"
+import { initialValue,handleSubmit } from "./form-action"
 
 export default function BasicFormMainpage() {
 
@@ -8,19 +9,11 @@ export default function BasicFormMainpage() {
         <>
 
             <div className="container">
-                <div className="h3 text-primary text-center"> Basic Form </div>
+                <div className="h3 text-primary text-center"> Registration Form </div>
                 <div>
-
                     <Formik
-                        initialValues={{
-                            candidateName: "",
-                            candidateAge:"",
-                            candidateEmail:"",
-                            candidatePassword:""
-                        }}
-
-                        onSubmit={(value) => console.log("form is submitted====>", value)}
-
+                        initialValues={initialValue}
+                        onSubmit={handleSubmit}
                     >
                         <BasicForm />
                     </Formik>
