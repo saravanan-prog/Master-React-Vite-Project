@@ -20,6 +20,20 @@
         "fieldVisible":true,
         "fieldValue":""
     },
+    {
+        "fieldLabel":"Gender",
+        "fieldType" : "radio",
+        "fieldname" : "gender",
+        "fieldClassName":"form-label ms-3",
+        "fieldID":"male",
+        "fieldPlaceholder":"",
+        "fieldVisible":true,
+        "fieldValue":"male",
+        "fildChildren":[
+            {"checkboxLabel":"Male","checkboxValue":"male"},
+            {"checkboxLabel":"Female","checkboxValue":"female"}
+        ]
+    },  
     
     {
         "fieldLabel":" Password",
