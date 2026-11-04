@@ -12,20 +12,7 @@ export default function EmPloyeeBulkUpdate(){
         }
     )
 
-    const bulkUpdate = () => {
-        
-        setEmployee(
-            {
-                ...employee,
-                name:"Vimal",
-                age : 29,
-                degree:"M.tech",
-                work:"Infosys",
-                location : "Banglore"
-            }
-        )
-    }
-
+   
     return(
         <>
             <div className="h2 text-center text-primary"> Employee information </div>
@@ -57,7 +44,7 @@ export default function EmPloyeeBulkUpdate(){
                 </table>
             </div>
             <div>
-                <button className="btn btn-info" onClick = {bulkUpdate}> Bulk Update </button>
+                <button className="btn btn-info"> Bulk Update </button>
             </div>
         
         </>

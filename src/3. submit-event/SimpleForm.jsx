@@ -4,48 +4,18 @@ import { postApiCall } from "../0.services/Service"
 export default function SimpleForm(){
 
     const [formData,setFormData] = useState({})
-    const [apiSuccess,setApisuccess] = useState(false)
-
-    const handleChange = (e) => {
-        const fieldName  =  e.target.name
-        const fieldValue =  e.target.value
-
-        setFormData({...formData, [fieldName] : fieldValue})
-
-    }
-
-    const handleSubmit =  async (e) => {
-        e.preventDefault()
-        //API-Code
-        try{
-            const payload = {
-                "id": 0,
-                "username": formData['canididate-name'],
-                "email" :   formData['canididate-email'],
-                "password": formData['canididate-name']
-            }
-            const response =  await postApiCall(payload)
-            
-            console.log("response===>",response)
-        }
-        catch(error){
-            console.error("Error:::",error)
-        }
-        
-    }
-
+   
     return(
         <>
             <div className="container m-3">
                 <div className="h3 text-center text-primary">Register Form</div>
-                <form onSubmit={handleSubmit}>
+                <form >
                     <div>
                         <lable className="form-label">Enter Your Name</lable>
                         <input 
                             type="text" 
                             name="canididate-name" 
                             className="form-control" 
-                            onChange ={handleChange}
                         />
                     </div>
                     <div>
@@ -54,7 +24,6 @@ export default function SimpleForm(){
                             type="text" 
                             name="canididate-email" 
                             className="form-control" 
-                            onChange ={handleChange}
                         />
                     </div>
                     <div>
@@ -62,8 +31,7 @@ export default function SimpleForm(){
                         <input 
                             type="text" 
                             name="canididate-Phone" 
-                            className="form-control"
-                            onChange ={handleChange} 
+                            className="form-control" 
                         />
                     </div>
                     <div>

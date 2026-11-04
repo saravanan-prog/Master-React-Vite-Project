@@ -7,11 +7,7 @@ export default function A_InputBoxEvent() {
     <>
       <div className="container">
         <div>
-          <input type="text" onChange={(e) => setText(e.target.value)} />
-        </div>
-        <div className="mt-3">
-          <span className="h3">Typed Text : </span>
-          <span>{text}</span>
+          <input type="text"  />
         </div>
       </div>
     </>

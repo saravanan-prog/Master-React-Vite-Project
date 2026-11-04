@@ -2,16 +2,13 @@ import { useState } from "react"
 
 export default function B_SelectBoxEvent(){
 
-    const [selectedItem,setSelectedItem] = useState("")
+    const [selectedItem,setSelectedItem] = useState("XXXX")
 
     return(
         <>
             <div className="container m-3">
                 <label htmlFor="country" className="form-label">Country</label>
-                <select name="country" id="country" 
-                    className="form-select"
-                    onChange = {(e)=>setSelectedItem(e?.target?.value)}
-                >
+                <select name="country" id="country">
                     <option value="India">India</option>
                     <option value="Pakisthan">Pakisthan</option>
                     <option value="China">China</option>
