@@ -1,6 +1,6 @@
 import { Formik,Form,Field } from "formik"
 import BasicForm from "./BasicForm"
-import { initialValue,handleSubmit } from "./form-action"
+import { initialValue,handleSubmit,validationSchema } from "./form-action"
 
 export default function BasicFormMainpage() {
 
@@ -13,6 +13,7 @@ export default function BasicFormMainpage() {
                 <div>
                     <Formik
                         initialValues={initialValue}
+                        validationSchema={validationSchema}
                         onSubmit={handleSubmit}
                     >
                         <BasicForm />

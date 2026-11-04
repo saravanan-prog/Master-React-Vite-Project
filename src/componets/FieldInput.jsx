@@ -1,9 +1,9 @@
-import { Field } from "formik"
+import { Field, ErrorMessage } from "formik"
 import FieldSelectBox from "./FormSelectBox"
 
-export default function FieldInput( 
+export default function FieldInput(
     {
-        fields:{
+        fields: {
             fieldClassName,
             fieldID,
             fieldLabel,
@@ -14,37 +14,48 @@ export default function FieldInput(
             fieldOption,
         }
     }
-)
-{
-    return(
+) {
+    return (
         <>
             {fieldVisible && (
                 <div>
                     <label className="form-label">{fieldLabel}</label>
                     {fieldType != "select" ? (
-                       <div>
+                        <div>
                             <Field
-                                id = {fieldID}
-                                type = {(fieldType !="textarea") && fieldType}
-                                as =   {(fieldType === "textarea") && fieldType}
-                                name = {fieldname}
-                                className = {fieldClassName} 
-                                placeholder= {fieldPlaceholder}
+                                id={fieldID}
+                                type={fieldType !== "textarea" ? fieldType : undefined}
+                                as={fieldType === "textarea" ? "textarea" : undefined}
+                                name={fieldname}
+                                className={fieldClassName}
+                                placeholder={fieldPlaceholder}
                             />
-
+                            <ErrorMessage 
+                                name={fieldname} 
+                                component={"div"} 
+                                className="text-danger" 
+                            />
                         </div>
-                    ):(
-                        <FieldSelectBox 
-                            fieldId  = {fieldID}
-                            fieldType = {fieldType}
-                            fieldName = {fieldname}
-                            fieldClassname = {fieldClassName}
-                            fieldOption = {fieldOption}
-                        />
+                    ) : (
+                        <div>
+                            <FieldSelectBox
+                                fieldId={fieldID}
+                                fieldType={fieldType}
+                                fieldName={fieldname}
+                                fieldClassname={fieldClassName}
+                                fieldOption={fieldOption}
+                            />
+                            <ErrorMessage 
+                                name={fieldname} 
+                                component={"div"} 
+                                className="text-danger"
+                            />
+                        </div>
+
                     )}
-                </div> 
-              )  
-            } 
+                </div>
+            )
+            }
         </>
     )
 }

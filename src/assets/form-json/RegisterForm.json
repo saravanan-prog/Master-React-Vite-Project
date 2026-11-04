@@ -3,7 +3,7 @@
     {
         "fieldLabel":"Enter Candidate name",
         "fieldType" : "text",
-        "fieldname" : "canidateName",
+        "fieldname" : "candiateName",
         "fieldClassName":"form-control",
         "fieldID":"canidateName",
         "fieldPlaceholder":"",
@@ -13,7 +13,7 @@
     {
         "fieldLabel":" Candidate Age",
         "fieldType" : "text",
-        "fieldname" : "candidateAge",
+        "fieldname" : "candidiateAge",
         "fieldClassName":"form-control",
         "fieldID":"candidateAage",
         "fieldPlaceholder":"",
