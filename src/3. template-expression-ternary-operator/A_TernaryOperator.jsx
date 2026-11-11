@@ -12,23 +12,25 @@ export default function A_TernaryOperator(){
         <>
             <div className="mt-3">
                 <div className="title h4 text-center text-primary text-uppercase"> Switch Program </div>
-                <div>
+                <div className="d-flex flex-column align-items-center mt-2">
                     {bulpSwitch ? 
                         (
-                            <img src={bulpON} alt="bulp" height={100} width={100} />
-                        ) 
-                        : 
+                            <div>
+                                <img src={bulpON} alt="bulp-on" />
+                            </div>
+                        )
+                    :
                         (
-                            <img src={bulpOFF} alt="bulp" height={100} width={100} />
-                        ) 
+                            <div>
+                                <img src={bulpOFF} alt="bulp-off" />
+                            </div>
+                        )
                     }
-    
+                    <div className="mt-3 ">
+                        <button onClick={ () => setBulpswitch(!bulpSwitch) }> Switch ON / OFF </button>
+                    </div>
                 </div>
-                <div>
-                   
-                    <button onClick={()=>setBulpswitch(!bulpSwitch)}> Switch ON / OFF </button>
-
-                </div>
+                
             </div>
         </>
     )

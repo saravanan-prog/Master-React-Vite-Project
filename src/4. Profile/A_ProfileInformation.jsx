@@ -6,7 +6,7 @@ import ShowProfile from "./components/ShowProfile"
 import ProfileForm from "./components/ProfileForm"
 
 
-export default function B_ProfileInformation() {
+export default function A_ProfileInformation() {
 
     const [formData, setFormData] = useState(
         {
@@ -16,7 +16,7 @@ export default function B_ProfileInformation() {
     )
     const [edit, setEdit] = useState(false)
 
-    const handleEdit = (data) => setEdit(data)
+    
     const handleSubmit = (e) => {
         e.preventDefault()
         setEdit(false)
@@ -34,7 +34,7 @@ export default function B_ProfileInformation() {
                                 <ShowProfile
                                     candidatename={formData.candidatename}
                                     candidateAge={formData.candidateAge}
-                                    handleEdit={handleEdit}
+                                    setEdit={setEdit}
                                 />
                             </>
                         )
