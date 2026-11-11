@@ -1,4 +1,4 @@
-
+import styles from './about.page.module.css'
 
 export default function AboutPage(){
 
@@ -6,7 +6,7 @@ export default function AboutPage(){
     return(
         <>
             <div>
-                <h1 > About </h1>
+                <h1 className = {styles.title}> About </h1>
             </div>
         
         </>
