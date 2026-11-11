@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
+import HomePage from './pages/home/Home.page'
+import AboutPage from './pages/about/About.page'
+
 
 createRoot(document.getElementById('root')).render(
   <div>
-     <p>Hello React !!</p>
+     <AboutPage />
   </div>
 )
