@@ -1,4 +1,7 @@
-import { Card,Button } from "react-bootstrap";
+
+import { Button,Card } from "react-bootstrap";
+import appleImage from '../assets/images/apple.jpg'
+
 
 
 export default function CardComponent() {
@@ -16,6 +19,13 @@ export default function CardComponent() {
                     {courses.map((course) => (
                         <div className="col-md-4 mb-3" key={course.id}>
                             <Card>
+                                <Card.Img
+                                    variant="top"
+                                    src={appleImage}
+                                    alt="product-img"
+                                    height={100}
+                                    width={100}
+                                />
                                 <Card.Body>
                                     <Card.Title>
                                         {course.name}
