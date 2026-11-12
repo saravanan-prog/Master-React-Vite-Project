@@ -9,11 +9,9 @@ import ContactPage from './pages/Contact.page'
 import GalleryPage from './pages/Gallery.page'
 import BlogPage from './pages/Blog.page'
 import PageNotFound from "./pages/page.notfound"
-import ButtonLayout from "./layout/ButtonLayout"
 
 
 export default function Router(){
-
 
     return (
         <Container>
