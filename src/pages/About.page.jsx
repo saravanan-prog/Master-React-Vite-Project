@@ -1,10 +1,12 @@
+import { Container } from "react-bootstrap"
+
 export default function AboutPage(){
 
     return(
         <>
-            <div className="container">
+            <Container>
                 <h1>About Page</h1>
-            </div>
+            </Container>
         
         </>
     )

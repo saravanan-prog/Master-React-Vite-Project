@@ -1,10 +1,11 @@
+import { Container } from "react-bootstrap"
 export default function GalleryPage(){
 
     return(
         <>
-            <div className="container">
+            <Container>
                 <h1>Gallery Page</h1>
-            </div>
+            </Container>
         
         </>
     )
