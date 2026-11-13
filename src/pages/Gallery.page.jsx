@@ -1,4 +1,4 @@
-export default function GalleryPage(){
+export default function Gallery(){
 
     return(
         <>
