@@ -18,9 +18,7 @@ export default function Product() {
             .catch((error) => console.error(error))
     }, [])
 
-    useEffect(() => {
 
-    }, [])
 
 
     return (
