@@ -16,7 +16,7 @@ export const getEndpoint = (pathname) => {
 
 export const getOption = (method, body = {},controller) => {
     OPTIONS.method = method
-    if (method === "post" || method === "put" || method === "patch" && body != {} )
+    if (method === "post" || method === "put" || method === "patch" && body !=undefined )
         OPTIONS.body = JSON.stringify(body)
 
     if(controller != undefined)
