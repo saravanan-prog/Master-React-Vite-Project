@@ -11,11 +11,7 @@ export default class C_unmountiongPhase extends Component{
             desigination: "Software Engieer"
         }
     }
-    componentWillUnmount(){
-        console.log("Component will unmount caling")
-
-        this.setState({})
-    }
+   
 
     render(){
          console.log("2. render calling")

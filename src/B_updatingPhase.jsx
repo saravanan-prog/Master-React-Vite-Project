@@ -11,11 +11,7 @@ export default class B_updatingPhase extends Component {
         };
     }
 
-    componentDidUpdate(prevPros, prevState) {
-        if (prevState.price != this.state.price) {
-            if (this.state.price > 30000) this.setState({ tax: 4 });
-        }
-    }
+   
 
     render() {
         return (
