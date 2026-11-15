@@ -4,6 +4,7 @@ export default function  D_SimpleCalculator(){
 
     const [count,setCount] = useState(0)
 
+ 
     return (
         <>
             <div className="container-fluid">
@@ -13,8 +14,9 @@ export default function  D_SimpleCalculator(){
                     <span className="text-danger h1"> {count} </span>
                 </div>
                 <div className="mt-3">
-                    <button onClick = {()=>setCount( count + 1 )}> ADD </button>
-                    <button onClick = {()=>setCount( count - 1 )} className="ms-1"> SUB </button>
+                    <button onClick = {() => setCount( count + 1 )}> ADD </button>
+                    <button onClick = {() => setCount( count - 1 )} className="ms-1"> SUB </button>
+                    
                 </div>
             </div>
         </>
