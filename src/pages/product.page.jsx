@@ -1,6 +1,6 @@
 import { use, useState, useEffect } from "react"
 import { fetchApiCall } from "../services/fetch.api.service"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { Card,Button } from "react-bootstrap"
 
 
@@ -11,9 +11,9 @@ export default function Product() {
 
     useEffect(() => {
 
-        const pathname = params['product-id'] ? `products/${params['product-id']}` : "products"
+        const endPointPathname = params['product-id'] ? `products/${params['product-id']}` : "products"
 
-        fetchApiCall(pathname)
+        fetchApiCall(endPointPathname)
             .then((response) =>  setProductList(Array.isArray(response) ? response : [response]))
             .catch((error) => console.error(error))
     }, [])
@@ -50,6 +50,8 @@ export default function Product() {
                                                 Buy Now
                                             </Button>
 
+                                            
+
                                         </Card.Body>
 
                                     </Card>
@@ -62,7 +64,7 @@ export default function Product() {
                         )}
                 </div>
 
-                Testing....{params['product-id']}
+               
             </div>
 
         </>
