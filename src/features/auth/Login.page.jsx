@@ -1,9 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { fetchApiCall } from "../../services/fetch.api.service"
+import { useNavigate } from "react-router-dom"
+import { loginStatus } from "../../utils/helperFunctions"
 
 export default function Login() {
 
     const [loginData, setLoginData] = useState({})
+    const navigate = useNavigate()
+
+
+    useEffect(()=>{
+        if(loginStatus())
+            navigate('/dashboard')
+    },[])
+
 
     const handleChange = (e) => {
         const fieldName = e.target.name
@@ -22,7 +32,11 @@ export default function Login() {
                 "password": loginData.password
             }
             const response = await fetchApiCall("auth/login","post",payload)
-            console.log("response=====>",response)
+            if(response && response.token){
+                localStorage.setItem('token',response.token)
+                navigate('/dashboard')
+            }
+                
         }
 
     }

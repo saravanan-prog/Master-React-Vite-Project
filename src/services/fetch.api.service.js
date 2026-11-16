@@ -3,7 +3,7 @@ import { getEndpoint, getOption } from "./url.service"
 export const fetchApiCall = async (path,method,body,controller) => {
 
     try{
-             console.log("path=======>",path,"method===>",method,"body===>",body)
+        console.log("path=======>",path,"method===>",method,"body===>",body)
         const url     =  getEndpoint(path)
         const option  =  getOption(method,body,controller)
            
