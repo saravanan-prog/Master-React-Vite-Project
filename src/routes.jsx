@@ -3,11 +3,11 @@ import { BrowserRouter,Routes,Route } from "react-router-dom"
 
 import HeaderLayout from "./layout/HeaderLayout"
 
-import HomePage from "./pages/Home.page"
-import AboutPage from './pages/About.page'
-import ContactPage from './pages/Contact.page'
-import GalleryPage from './pages/Gallery.page'
-import BlogPage from './pages/Blog.page'
+import HomePage from "./pages/home/Home.page"
+import AboutPage from './pages/about/About.page'
+import ContactPage from './pages/contact/Contact.page'
+import GalleryPage from './pages/gallery/Gallery.page'
+import BlogPage from './pages/Blog/Blog.page'
 import PageNotFound from "./pages/page.notfound"
 
 
