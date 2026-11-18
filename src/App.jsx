@@ -1,19 +1,15 @@
 import { Container } from "react-bootstrap"
 import Router from "./routes"
-import { MainContext } from "./context/gloabl.context"
+import MainContextProvider from "./context/MainContext.provider"
 
 export default function App(){
 
-    const appSettings = {
-        theme : "dark",
-        language:"tamil"
-    }
 
     return (
         <Container>
-            <MainContext.Provider value={appSettings}>
+            <MainContextProvider>
                 <Router />
-            </MainContext.Provider>
+            </MainContextProvider>
            
         </Container>
     )

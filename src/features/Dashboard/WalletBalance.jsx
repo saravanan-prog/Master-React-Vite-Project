@@ -4,9 +4,12 @@ import { useContext } from "react"
 
 export default function WalletBalance(){
 
-    const {dashboardData:{currentBalance}} =  useContext(DashboardContext)
+    const context =  useContext(DashboardContext)
 
-    console.log("currentBalance===>",currentBalance)
+    if(!context)
+        throw new Error("Context is not avaialbel")
+
+    console.log("context===>",context)
 
     return(
         <>
@@ -14,7 +17,7 @@ export default function WalletBalance(){
                 <div className="card" style={{width:"300px"}}>
                     <div className="card-body">
                         <div className="card-title">Balance</div>
-                        <div className="card-text">{currentBalance}</div>
+                        <div className="card-text">{context.currentBalance}</div>
                     </div>
                 </div>
             </Container>
