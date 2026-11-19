@@ -7,7 +7,8 @@ export default function C_UnControlledForm(){
     const passwordField = useRef()
 
  
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
         const payload = {
             username : emailField.current.value,
             passowrd : passwordField.current.value
@@ -26,7 +27,7 @@ export default function C_UnControlledForm(){
                     </div>
                      <div>
                         <label htmlFor="password" className="form-label">Password</label>
-                        <input type="text" ref={emailField} className="form-control" id="password"/>
+                        <input type="password" ref={passwordField} className="form-control" id="password"/>
                     </div>
                     <div>
                         <button className="btn btn-primary">Login</button>
