@@ -5,36 +5,7 @@ export default function SimpleForm(){
 
     const [formData,setFormData] = useState({})
 
-    const handleChange = (e) => {
-        
-        const fieldName  = e.target.name
-        const fieldValue = e.target.value
-
-        setFormData({
-            ...formData,
-            [fieldName] : fieldValue
-        })
-
-    }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        //api call
-        const payload = {
-            "username": formData["canididate-name"],
-            "email": formData["canididate-email"],
-            "password": formData["canididate-password"]
-        }
-
-        try{
-            const response = await postApiCall(payload)
-             console.log("Response=========>",response)
-        }
-        catch(error){
-            console.error(error)
-        }
-    }
-   
+    
     return(
         <>
             <div className="container m-3">

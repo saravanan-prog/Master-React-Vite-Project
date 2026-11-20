@@ -13,17 +13,6 @@ export default function EmployeeBulkUpdate() {
     )
 
     const handleBulkUpdate = () => {
-
-        setEmployee(
-            {
-                ...employee,
-                name: "Manikandan",
-                age: 23,
-               
-            }
-        )
-
-
     }
 
 
