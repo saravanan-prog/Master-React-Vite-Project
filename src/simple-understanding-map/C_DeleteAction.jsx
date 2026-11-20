@@ -1,51 +1,55 @@
 import { useState } from "react";
 
-export default function C_DeleteAction(){
+export default function C_DeleteAction() {
 
-    const [fruits,setFruits] = useState(["apple","orange","grapes","pineapple"])
-   
-    return(
+    const [fruitList, setFruitList] = useState(["apple", "orange", "grapes", "pineapple"])
+
+    const handleDelete = (fruitKey) => {
+
+        const newFruitList = fruitList.filter((value, index) => index != fruitKey)
+        setFruitList(newFruitList)
+
+    }
+
+    return (
         <>
             <div className="container mt-3">
-                <div className="h1 text-center text-danger"> Fruit List </div>
-                
-                
+                <div className="h1 text-center text-secondary"> 
+                    Fruit List 
+                </div>
+
+
                 <table className="table">
                     <thead>
-                       <tr>
+                        <tr>
                             <th>Sno</th>
                             <th>Fruits</th>
                             <th>Action</th>
-                       </tr>
+                        </tr>
                     </thead>
                     <tbody>
-                        {
-                        fruits && fruits.length!= 0 ? (
-                        fruits.map((value,index)=>{
-                            return (
-                                <tr key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>{value}</td>
-                                    <td>
-                                        <button onClick={()=>handleDelete(index)}>Delete</button>
-                                    
-                                    </td>
-                                    
-                                </tr>
-                            )
-                        }))
-                        :
-                        (
-                            <tr > <td colspan={3}>No Fruits Found</td> </tr>
-
-                        )
-                        
-                        
-                        }
+                        { fruitList.length > 0 ? (
+                            fruitList.map((fruit, key) => 
+                                 (
+                                    <tr key={key}>
+                                        <td>{key + 1}</td>
+                                        <td>{fruit}</td>
+                                        <td>
+                                            <button 
+                                                onClick={() => handleDelete(key)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                )
+                            ))
+                            :
+                            (
+                                <tr> <td colSpan={3} className="h5 text-center">No Fruits Found</td> </tr>
+                            )}
                     </tbody>
                 </table>
-                
-              
             </div>
         </>
     )
