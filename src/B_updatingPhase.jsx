@@ -1,6 +1,7 @@
 import { Component } from "react";
 
 export default class B_updatingPhase extends Component {
+    
     constructor() {
         super();
 
