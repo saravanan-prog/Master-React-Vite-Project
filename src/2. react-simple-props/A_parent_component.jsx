@@ -14,11 +14,7 @@ export default function A_parent_component() {
                 <div className="h2 text-primary text-center"> Employee Information  </div>
                 <div>
                     {/* Child component  */}
-                    <B_child_component
-                        employeeName={employeeName}
-                        employeeAge={employeeAge}
-                        employeeSalary={employeeSalary}
-                    />
+                    <B_child_component/>
                 </div>
             </div>
         </>
