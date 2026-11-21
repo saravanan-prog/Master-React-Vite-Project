@@ -17,7 +17,6 @@ export default function C_GenderSelection(){
                         name="gender" 
                         value="male" 
                         id="male" 
-                        onChange ={(e)=>setGender(e?.target.value)}
                     />
                     <label htmlFor="male" className="form-check-label ms-1">Male</label>
                   </div>
@@ -28,7 +27,6 @@ export default function C_GenderSelection(){
                         name="gender" 
                         value="female" 
                         id="female"
-                        onChange ={(e)=>setGender(e?.target.value)}
                     />
                     <label htmlFor="female" className="form-check-label ms-1">Female</label>
                   </div>
@@ -38,9 +36,7 @@ export default function C_GenderSelection(){
                         className="form-check-input" 
                         name="gender" 
                         value="Transgender" 
-                        id="trans"
-                        onChange ={(e)=>setGender(e?.target.value)}
-                        
+                        id="trans"   
                     />
                     <label htmlFor="trans" className="form-check-label  ms-1">TransGender</label>
                   </div>
@@ -51,17 +47,13 @@ export default function C_GenderSelection(){
                         name="gender" 
                         value="LGBTQ+" 
                         id="others" 
-                         onChange ={(e)=>setGender(e?.target.value)}
                         
                     />
                     <label htmlFor="others" className="form-check-label  ms-1">Others</label>
                   </div>
                </div>
 
-               <div className="mt-5">
-                    <span className="h6  ">You are : </span>
-                    <span className="text-primary text-uppercase">{gender}</span>
-               </div>
+               
             </div>
         </>
     )
