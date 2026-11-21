@@ -13,8 +13,12 @@ export default function A_parent_component() {
             <div className="container">
                 <div className="h2 text-primary text-center"> Employee Information  </div>
                 <div>
-                    {/* Child component  */}
-                    <B_child_component/>
+                    {/* Child component to props */}
+                    <B_child_component
+                        employeeName = {employeeName}
+                        employeeAge = {employeeAge}
+                        employeeSalary = {employeeSalary}
+                    />
                 </div>
             </div>
         </>

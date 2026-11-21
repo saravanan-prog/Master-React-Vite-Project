@@ -1,22 +1,28 @@
 
-export default function B_child_component() {
-
+export default function B_child_component(
+    {
+       employeeAge,
+       employeeName,
+       employeeSalary
+    }
+) {
+   
 
     return (
         <>
             <div className="container">
                 <div>
                     <span className="fs-3">Employee Name : </span>
-                    <span> xxxx </span>
+                    <span> {employeeName} </span>
                 </div>
 
                 <div>
                     <span className="fs-3">Employee Age : </span>
-                    <span> xxxx </span>
+                    <span> {employeeAge} </span>
                 </div>
                 <div>
                     <span className="fs-3">Employee Take home Salary : </span>
-                    <span> xxxx </span>
+                    <span> {employeeSalary} </span>
                 </div>
 
             </div>

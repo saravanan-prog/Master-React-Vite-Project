@@ -1,4 +1,4 @@
-import { useState } from "react"
+
 import B_child_component from "./B_Child_component"
 
 export default function A_parent_component(){
