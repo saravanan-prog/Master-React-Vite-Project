@@ -3,6 +3,7 @@ import { Component } from "react";
 export default class B_updatingPhase extends Component {
     
     constructor() {
+        console.log("1. Constrctor calling")
         super();
 
         this.state = {
@@ -11,10 +12,26 @@ export default class B_updatingPhase extends Component {
             tax: 3,
         };
     }
+    componentDidMount(){
+         console.log("2. componentDidMount calling")
+    }
+
+    componentDidUpdate(prevProps,prevState){
+        console.log("3. componentDidUpdate calling")
+
+        console.log("previous state =====>",prevState.price)
+        console.log("current State =====>",this.state.price)
+
+        if(prevState.price != this.state.price){
+            if(this.state.price >= 30000)
+                this.setState({tax:4})
+        }
+    }
 
    
 
     render() {
+         console.log("4. render calling")
         return (
             <>
                 <div className="container ">

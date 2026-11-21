@@ -1,6 +1,9 @@
 import { Component } from "react";
+import { fetchApiService } from "../service/fetch-api-Service";
 
 export default class C_unmountiongPhase extends Component{
+
+    controller = new AbortController();
 
     constructor(){
         console.log("1. constructor calling")
@@ -10,6 +13,16 @@ export default class C_unmountiongPhase extends Component{
             canidateAge: 28,
             desigination: "Software Engieer"
         }
+    }
+    componentDidMount(){
+        fetchApiService("products","GET")
+        .then((data)=> console.log("Products====>",data))
+        .catch((error) => console.log("error===>",error))
+    }
+
+    componentWillUnmount(){
+        console.log("3. Component will un mount is triggred")
+        this.controller.abort()
     }
    
 
