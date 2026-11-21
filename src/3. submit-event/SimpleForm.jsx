@@ -3,7 +3,6 @@ import { postApiCall } from "../services/Service"
 
 export default function SimpleForm(){
 
-    const [formData,setFormData] = useState({})
 
     
     return(
