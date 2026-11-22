@@ -1,4 +1,4 @@
-import PortFolioMainpage from "./6. props-drilling/PortolioMainpage"
+import PortFolioMainpage from "./6. props-drilling/Portfolio.main.page"
 
 
 export default function App(){

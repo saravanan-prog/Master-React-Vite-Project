@@ -28,7 +28,7 @@ export default function PortFolioMainpage(){
 
     return(
         <>
-            <div class="container">
+            <div className="container">
                 <div className="h1 text-center text-secondar">Portfolio Mangement</div>
                 <div className="mt-4">
                     <BasicInformation 
