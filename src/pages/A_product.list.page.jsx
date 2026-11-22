@@ -1,14 +1,11 @@
 import { useState,useEffect } from "react"
-import {fetchApiCall} from '../services/fetch.api.service'
 
 export default function A_ProductList(){
 
     const [products,setProducts] = useState([])
 
     useEffect(()=>{
-        fetchApiCall("products","get")
-        .then((data) => setProducts(data))
-        .catch((error)=>console.error(error))
+       
     },[])
 
     return (
