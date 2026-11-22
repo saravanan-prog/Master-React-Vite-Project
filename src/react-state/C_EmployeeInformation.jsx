@@ -24,7 +24,9 @@ export default function C_Employeeinformation() {
                             <th>Employee Name </th>
                             <td> {employee?.name} </td>
                             <td>
-                                <button onClick={ () => setEmployee( {...employee, name:"Rajesh" }) }>
+                                <button onClick={ 
+                                    () => setEmployee( {...employee, name:"Rajesh" }) 
+                                }>
                                     Change name
                                 </button>
                             </td>
@@ -33,7 +35,9 @@ export default function C_Employeeinformation() {
                             <th>Employee Age </th>
                             <td> {employee?.age} </td>
                             <td>
-                                <button onClick= { () => setEmployee( {...employee, age:29 })}>
+                                <button onClick= {
+                                     () => setEmployee( {...employee, age:29 })
+                                }>
                                     Update Age
                                 </button>
                             </td>
@@ -42,7 +46,9 @@ export default function C_Employeeinformation() {
                             <th>Employee degree </th>
                             <td>{employee?.degree}</td>
                             <td>
-                                <button onClick= { () => setEmployee( {...employee, degree:"M.tech" })}
+                                <button onClick= { 
+                                    () => setEmployee( {...employee, degree:"M.tech" })
+                                }
                                 >
                                     Update degree
                                 </button>
@@ -65,7 +71,9 @@ export default function C_Employeeinformation() {
                             <th>Employee location </th>
                             <td>{employee?.location}</td>
                             <td>
-                                <button onClick= { () => setEmployee( {...employee, location:"Chennai" })}>
+                                <button onClick= { 
+                                    () => setEmployee( {...employee, location:"Chennai" })
+                                }>
                                     Update Location
                                 </button>
                             </td>

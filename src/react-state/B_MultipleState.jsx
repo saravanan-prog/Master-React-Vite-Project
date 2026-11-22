@@ -11,7 +11,7 @@ export default function B_MultipleState() {
         <>
             <div className="container">
                 <div className="h2 text-center text-primary">Change Information</div>
-                <div>
+                <div className="mt-5">
                     <span className="text-danger">Canidate Name :</span>
                     <span className ="ms-2">{candidateName}</span>
                     <button className="btn btn-primary ms-2" onClick={()=>setCanidateName("Rajesh")}>Change Name</button>
