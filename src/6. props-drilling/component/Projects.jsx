@@ -1,16 +1,26 @@
-export default function Projects() {
+import Skills from './Skills'
+
+export default function Projects(
+    {
+        projects,
+        skills
+    }
+) {
 
 
     return (
         <>
-            <div className="container">
-                <div className="h3">Projects </div>
+            <div className="mt-3">
+                <div className="h3 text-primary">Projects </div>
                 <div>
-                    <span className="fs-5">Online Attandance Mangement system</span>
+                    {projects.map((project,key)=> (
+                        <div className="fs-5" key={key}>{project}</div>
+                    ))}
+                   
                 </div>
 
                 <div>
-                    <span className="fs-5">Portfolio Web Portal</span>
+                    <Skills  skills = {skills} />
                 </div>
             </div>
         </>

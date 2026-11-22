@@ -1,16 +1,17 @@
-export default function Skills() {
+export default function Skills(
+    {skills}
+) {
 
 
     return (
         <>
-            <div className="container">
-                <div className="h3">Skills </div>
+            <div className="mt-3">
+                <div className="h3 text-primary">Skills </div>
                 <div>
-                    <span className="fs-5">React</span>
-                </div>
-
-                <div>
-                    <span className="fs-5">Angular</span>
+                    {skills.map((skill,key)=> (
+                        <div className="fs-5" key={key}>{skill}</div>
+                    ))}
+                   
                 </div>
             </div>
         </>

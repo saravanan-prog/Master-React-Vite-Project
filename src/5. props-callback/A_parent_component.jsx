@@ -6,6 +6,7 @@ export default function A_parent_component() {
   const [count, setCount] = useState(0);
 
   const addCout = (item) => {
+    console.log("Item=====>",item)
     setCount(count + item);
   };
   const multiplyCount = (item) => {
@@ -19,9 +20,10 @@ export default function A_parent_component() {
         <div className="h5 mt-3 text-primary">Simple Counter App</div>
         <div>
           <B_child_component
-            count={count}
-            addCout={addCout}
-            multiplyCount={multiplyCount}
+            count = {count}
+            addCout = {addCout}
+            multiplyCount = {multiplyCount}
+            setCount = {setCount}
           />
         </div>
       </div>

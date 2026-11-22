@@ -1,10 +1,11 @@
-import A_parent_component from "./3. react-complex-props/A_parent_component"
+import PortFolioMainpage from "./6. props-drilling/PortolioMainpage"
+
 
 export default function App(){
 
     return(
         <div>
-            <A_parent_component />
+            <PortFolioMainpage />
         </div>
     )
 }

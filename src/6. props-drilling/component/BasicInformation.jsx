@@ -1,12 +1,12 @@
 import EducationInfo from "./EducationInfo";
 
-export default function BasicInformation(
-  { student }
-) {
+export default function BasicInformation({ 
+    student 
+  }) {
   return (
     <>
-      <div className="container mt-5">
-        <div className="h3">Basic Information</div>
+      <div className="container mt-5 ">
+        <div className="h3 text-primary">Basic Information</div>
         <div>
           <span className="fs-5">Name</span>
           <span> {student.name} </span>
@@ -18,7 +18,7 @@ export default function BasicInformation(
         </div>
         <div>
           <EducationInfo 
-             student = {student}
+            student = {student}
           />
         </div>
       </div>

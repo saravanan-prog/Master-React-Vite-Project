@@ -6,7 +6,10 @@ export default function EducationInfo(
         education:{
             hsc,
             sslc
-        }
+        },
+        exprience,
+        projects,
+        skills
        }
     }
 ) {
@@ -14,8 +17,8 @@ export default function EducationInfo(
 
     return (
         <>
-            <div className="container">
-                <div className="h3">Education Information</div>
+            <div className="mt-3">
+                <div className="h3 text-primary">Education Information</div>
                 <div>
                     <span className="fs-5">SSLC Mark</span>
                     <span> {sslc}  </span>
@@ -28,7 +31,9 @@ export default function EducationInfo(
 
                 <div>
                    <ExprienceInfo 
-                        student = {student}
+                        exprience = {exprience}
+                        projects  = {projects}
+                        skills   = {skills}
                    />
                 </div>
             </div>

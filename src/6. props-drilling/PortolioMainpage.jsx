@@ -2,10 +2,11 @@ import { useState } from "react";
 import BasicInformation from "./component/BasicInformation";
 
 export default function PortFolioMainpage(){
+
     const [student,setStudent] = useState(
         {
             name:"Saravanan",
-            address: "2nd cross st",
+            address: "2nd cross st 4th Ave west , velachery",
             education:{
                 sslc : 480,
                 hsc : 780
@@ -21,7 +22,6 @@ export default function PortFolioMainpage(){
             skills:[
                 "React",
                 "Angular"
-
             ]
         }
     )
@@ -29,9 +29,13 @@ export default function PortFolioMainpage(){
     return(
         <>
             <div class="container">
-                <BasicInformation 
-                    student = {student}
-                />
+                <div className="h1 text-center text-secondar">Portfolio Mangement</div>
+                <div className="mt-4">
+                    <BasicInformation 
+                        student = {student}
+                    />
+                </div>
+                
             </div>
         </>
     )
