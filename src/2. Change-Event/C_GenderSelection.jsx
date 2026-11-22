@@ -2,12 +2,12 @@ import { useState } from "react"
 
 export default function C_GenderSelection(){
 
-    const [gender,setGender] = useState(null)
+    const [gender,setGender] = useState("male")
 
     return(
         <>
             <div className="container mt-2">
-                <div className="h2 text-center text-info">Gender Selection Application</div>
+               <div className="h2 text-center text-info">Gender Selection Application</div>
                <div className="mt-5">
                   <label htmlFor="male" className="form-label h6">Gender</label>
                   <div className="form-check-inline">
@@ -17,6 +17,7 @@ export default function C_GenderSelection(){
                         name="gender" 
                         value="male" 
                         id="male" 
+                        onChange = {(e)=>setGender(e?.target?.value)}
                     />
                     <label htmlFor="male" className="form-check-label ms-1">Male</label>
                   </div>
@@ -27,6 +28,7 @@ export default function C_GenderSelection(){
                         name="gender" 
                         value="female" 
                         id="female"
+                        onChange = {(e)=>setGender(e?.target?.value)}
                     />
                     <label htmlFor="female" className="form-check-label ms-1">Female</label>
                   </div>
@@ -36,7 +38,8 @@ export default function C_GenderSelection(){
                         className="form-check-input" 
                         name="gender" 
                         value="Transgender" 
-                        id="trans"   
+                        id="trans"  
+                        onChange = {(e)=>setGender(e?.target?.value)} 
                     />
                     <label htmlFor="trans" className="form-check-label  ms-1">TransGender</label>
                   </div>
@@ -46,13 +49,17 @@ export default function C_GenderSelection(){
                         className="form-check-input" 
                         name="gender" 
                         value="LGBTQ+" 
-                        id="others" 
+                        id="others"
+                        onChange = {(e)=>setGender(e?.target?.value)} 
                         
                     />
                     <label htmlFor="others" className="form-check-label  ms-1">Others</label>
                   </div>
                </div>
-
+                <div className="mt-3">
+                    <span className ="h6">You choosed gender is : </span>
+                    <span className="ms-2">{gender}</span>
+                </div>
                
             </div>
         </>

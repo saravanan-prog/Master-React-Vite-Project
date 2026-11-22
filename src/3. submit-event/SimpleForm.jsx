@@ -1,10 +1,27 @@
 import { useState } from "react"
-import { postApiCall } from "../services/Service"
 
 export default function SimpleForm(){
+    const [formData,setFormData] = useState({})
 
+    const handleChange = (event) => {
+       
+        const fieldName =  event.target.name
+        const fieldValue = event.target.value
 
-    
+        setFormData(
+            {
+              ...formData,
+              [fieldName] : fieldValue
+            }
+        )
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        console.log("formData===>",formData)
+
+    }
+
     return(
         <>
             <div className="container m-3">

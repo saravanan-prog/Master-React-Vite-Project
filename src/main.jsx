@@ -3,14 +3,13 @@ import { createRoot } from 'react-dom/client'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
-import C_GenderSelection from './2. Change-Event/C_GenderSelection.jsx'
-import SimpleForm from './3. submit-event/SimpleForm.jsx'
+import App from './App.jsx'
 
 
 
 
 createRoot(document.getElementById('root')).render(
   <div>
-     <SimpleForm/>
+     <App/>
   </div>
 )
