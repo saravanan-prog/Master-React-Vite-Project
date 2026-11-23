@@ -1,15 +1,12 @@
-export const BASEURL = "https://fakestoreapi.com"
+export const BASEURL = import.meta.env.VITE_BASE_ENOINT_URL
 
 export const URL = {
-    "users": "/users",
-    "products": "/products"
+    "users": "users",
+    "products": "products",
+    "login" : 'auth/login'
 }
 
-export const OPTIONS = {
-    "headers": {
-        "Content-Type": "application/json"
-    }
-}
+
 
 
 
