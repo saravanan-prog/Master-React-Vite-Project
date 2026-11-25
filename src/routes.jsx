@@ -22,6 +22,7 @@ export default function Router(){
                     <Suspense fallback = {<h1>Loading....</h1>}>
                         <HeaderLayout />
                         <Routes>
+                            <Route index element = { <HomePage /> } />
                             <Route path="/" element = { <HomePage /> } />
                             <Route path="home" element= { <HomePage /> } />
                             <Route path="about" element= { <AboutPage /> } />
