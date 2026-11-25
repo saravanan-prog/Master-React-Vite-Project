@@ -32,8 +32,6 @@ export default function Router(){
                         </Routes>
                      </Suspense>
                 </BrowserRouter>
-           
-            
         </Container>
     )
 }
