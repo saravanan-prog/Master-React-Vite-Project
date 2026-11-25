@@ -2,15 +2,9 @@ import { Container } from "react-bootstrap"
 import { BrowserRouter,Routes,Route } from "react-router-dom"
 
 import { lazy,Suspense } from "react"
-
-const HeaderLayout  = lazy(()=>import("./layout/HeaderLayout"))
-const HomePage      = lazy(()=>import("./pages/Home.page"))
-const AboutPage     = lazy(()=>import('./pages/About.page'))
-const ContactPage   = lazy(()=>import('./pages/Contact.page'))
-const GalleryPage   = lazy(()=>import('./pages/Gallery.page'))
-const BlogPage      = lazy(()=>import('./pages/Blog.page'))
-const PageNotFound  = lazy(()=>import("./pages/page.notfound"))
-
+const Header = lazy(()=>import('./layout/HeaderLayout'))
+const CounterPage = lazy(()=>import('./pages/counter/Counter.page'))
+const CounteDetailPage = lazy(()=>import('./pages/counter-details/Counter.details.page'))
 
 
 export default function Router(){
@@ -19,16 +13,12 @@ export default function Router(){
         <Container>
            
                 <BrowserRouter>
+                    <Header/>
                     <Suspense fallback = {<h1>Loading....</h1>}>
-                        <HeaderLayout />
-                        <Routes>
-                            <Route path="/" element = { <HomePage /> } />
-                            <Route path="home" element= { <HomePage /> } />
-                            <Route path="about" element= { <AboutPage /> } />
-                            <Route path="contact" element= { <ContactPage /> } />
-                            <Route path="gallery" element= { <GalleryPage /> } />
-                            <Route path="blog" element= { <BlogPage /> } />
-                            <Route path="*" element= { <PageNotFound /> } />
+                        <Routes >
+                            <Route index element = { <CounterPage /> } />
+                            <Route path="counter" element = { <CounterPage /> } />
+                            <Route path="counter-detail" element = { <CounteDetailPage /> } />
                         </Routes>
                      </Suspense>
                 </BrowserRouter>

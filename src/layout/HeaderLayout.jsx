@@ -5,34 +5,12 @@ export default function HeaderLayout() {
 
     return (
         <>
-            <Navbar bg="dark" variant="dark">
-
-                <Container>
-                    <Navbar.Brand as={Link} to="/">
-                        MyWebsite
-                    </Navbar.Brand>
-
-                    <Nav>
-
-                        <Nav.Link as={Link} to="/">
-                            Home
-                        </Nav.Link>
-
-                        <Nav.Link as={Link} to="/about">
-                            About
-                        </Nav.Link>
-
-                        <Nav.Link as={Link} to="/blog">
-                            Blogs
-                        </Nav.Link>
-
-                        <Nav.Link as={Link} to="/contact">
-                            Contact
-                        </Nav.Link>
-
-                    </Nav>
-                </Container>
-            </Navbar>
+         <div className="container">
+            <nav className="nav">
+                <Link to = {"/counter"} className="nav-link"> Counter </Link>
+                <Link to = {"/counter-detail"} className="nav-link"> Counter-Detail </Link>
+            </nav>
+         </div>
 
         </>
     )
