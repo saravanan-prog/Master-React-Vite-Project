@@ -1,4 +1,10 @@
+import { useSelector,useDispatch } from "react-redux"
+
 export default function Counter(){
+
+    useSelector((state) => console.log("detils page Store state====>",state))
+
+    const count = useSelector(state => state.counter.count)
 
     return(
         <>
@@ -6,7 +12,7 @@ export default function Counter(){
                <div className="h4">Counter Details</div>
                 <div className="mt-3">
 
-                    <h3>Current Counter Value: 0 </h3>
+                    <h3>Current Counter Value: {count} </h3>
 
                     <p>
                         The counter value is maintained in the Redux store.
