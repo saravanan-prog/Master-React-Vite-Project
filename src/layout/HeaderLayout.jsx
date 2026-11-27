@@ -7,8 +7,8 @@ export default function HeaderLayout() {
         <>
          <div className="container">
             <nav className="nav">
-                <Link to = {"/counter"} className="nav-link"> Counter </Link>
-                <Link to = {"/counter-detail"} className="nav-link"> Counter-Detail </Link>
+                <Link to = {"/add-batch"} className="nav-link"> Add Batch </Link>
+                <Link to = {"/view-batch"} className="nav-link"> View Batch list </Link>
             </nav>
          </div>
 

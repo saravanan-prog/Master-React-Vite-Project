@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from '../pages/counter/couter.slice'
+import batchAllocationReducer from '../pages/Batch-allocation-form/allocation.form.slice' 
 
 export const store =  configureStore({
     reducer:{
-        counter: counterReducer
+        batches: batchAllocationReducer
     }
 })

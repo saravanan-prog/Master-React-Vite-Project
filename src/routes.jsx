@@ -2,9 +2,9 @@ import { Container } from "react-bootstrap"
 import { BrowserRouter,Routes,Route } from "react-router-dom"
 
 import { lazy,Suspense } from "react"
+import BatchListPage from "./pages/view-All-Batch/BatchList.page"
 const Header = lazy(()=>import('./layout/HeaderLayout'))
-const CounterPage = lazy(()=>import('./pages/counter/Counter.page'))
-const CounteDetailPage = lazy(()=>import('./pages/counter-details/Counter.details.page'))
+const AllocationForm = lazy(()=>import("./pages/Batch-allocation-form/Allocation.form"))
 
 
 export default function Router(){
@@ -16,9 +16,9 @@ export default function Router(){
                     <Header/>
                     <Suspense fallback = {<h1>Loading....</h1>}>
                         <Routes >
-                            <Route index element = { <CounterPage /> } />
-                            <Route path="counter" element = { <CounterPage /> } />
-                            <Route path="counter-detail" element = { <CounteDetailPage /> } />
+                          <Route index element={<AllocationForm/>}/>
+                          <Route path="add-batch" element={<AllocationForm/>}/>
+                          <Route path="view-batch" element={<BatchListPage/>}/>
                         </Routes>
                      </Suspense>
                 </BrowserRouter>
