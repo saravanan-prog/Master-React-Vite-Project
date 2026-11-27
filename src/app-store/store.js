@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import batchAllocationReducer from '../pages/Batch-allocation-form/allocation.form.slice' 
+import DashboardReducer from '../pages/Dashboard/dashboard.slice'
 
 export const store =  configureStore({
     reducer:{
-        batches: batchAllocationReducer
+       dashboard:DashboardReducer
     }
 })
